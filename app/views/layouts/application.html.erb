@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Wivern &#124; Coming Soon</title>
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	<script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+	typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+	b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+	mixpanel.init("c7e33c54e356359ab93f801c38529e1c");</script>
+</head>
+<body <% if current_page?(about_path) %>class="about"<% end %>>
+
+	<div class="header">
+		<div class="container">
+			<a href="/"><h1>Wivern</h1></a>
+			<ul class="game-picker">
+				<li class="active">beta <span class="arrow-up"></span></li>
+				<li>Other games...</li>
+			</ul>
+			<ul class="nav">
+				<li><a href="/"><%= link_to "Early access", root_path, :class => current_page?(root_path) ? "active" : "" %></a></li>
+				<li><a href="/about"><%= link_to "About us", about_path, :class => current_page?(about_path) ? "active" : "" %></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<%= yield %>
+
+	<div class="footer">
+		<div class="container assembly">
+			An <img src="/assets/assembly2.jpg" /> project &#8212; <a href="http://www.assemblymade.com/wivern">Contribute now!</a>
+		</div>
+	</div>
+
+</body>
+</html>

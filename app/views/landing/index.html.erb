@@ -1,0 +1,95 @@
+
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	var pathname = window.location.pathname;
+    if (window.location.href.indexOf('?ref=forum') >= 0) {
+    	$('div.left').hide();
+    	$('form.right').removeClass('right');
+    	$("<h3>Signup for Early Access</h3>").insertBefore($("form"));
+    	$('h3').css('margin-bottom', '0px');
+    }     
+
+    $('input').attr('autocomplete','off');
+    $('.selectpicker').fancySelect();
+
+    $('input.gamemodeteam').click(function(){
+	    if($('#fieldjttydrr-1, #fieldjttydrr-2').is(':checked')) {
+	    	$('label.hidden').fadeIn('400');
+	    } else {
+	    	$('label.hidden').hide();
+	    }
+	});
+
+});
+</script>
+	
+	<div class="container group">
+		
+		<div class="left">
+			<h3>Signup for Early Access</h3>
+			<p>We’re building a place for players no matter if they are beginners, semi-pro or a professionals. You can join leagues and tournaments, earn prizes, unlock achievements and discover your true potential!</p>
+			<p>We are starting with League of Legends but we have plans to expand in near future.</p>
+			<p>We will ensure that you have a great quality competition with lots of remarkable rewards corresponding your abilities.</p>
+			<p>Our product is still in development, but we’re organizing special pre-launch tournament for our first 200 members.</p>
+			<p>Tournaments are going to starting in ~3 weeks. We’ll have 1v1, 3v3, 5v5 and many more interesting game modes.</p>
+			<p><strong>Fill out this short form on the right and get ready!</strong></p>
+			<!-- <p>
+				<a class="btn twitter" target="_blank" href="http://www.twitter.com/wivernco"><i class="fa fa-twitter"></i>Twitter</a>
+				<a class="btn facebook" target="_blank" href="http://www.facebook.com/teamwivern"><i class="fa fa-facebook"></i>Facebook</a>
+			</p> -->
+		</div>
+
+		<form action="http://plusconf.createsend.com/t/r/s/ttijtud/" method="post" class="right">
+			<br><br>
+			<!--<h4><span>5</span><span>2</span><span class="slash">/</span><span>1</span><span>0</span><span>0</span> slots left</h4>-->
+
+	        <label>
+	      	  <input id="fieldName" name="cm-name" type="text" placeholder="Summoner name" required />
+			</label>
+			<label>
+				<select class="selectpicker" id="fieldjtzkud" name="cm-fo-jtzkud" required>
+					<option value="">Server</option>
+					<option value="4419957">EU West</option>
+					<option value="4419958">EU Nordic &amp; East</option>
+					<option value="4419959">North America</option>
+		            <option value="4437965">Latin America North</option>
+		            <option value="4437966">Latin America South</option>
+		            <option value="4437967">Russia</option>
+		            <option value="4437968">Turkey</option>
+		            <option value="4437969">Brazil</option>
+		            <option value="4437970">Oceania</option>
+		            <option value="4437971">Republic of Korea</option>
+				</select>
+       		</label>
+       		<div class="multiple">
+       			Game mode
+				<label>
+					<input id="fieldjttydrr-0" name="cm-fo-jttydrr" value="4437563" type="checkbox" />
+					<label for="fieldjttydrr-0">1v1 (Solo)</label>
+				</label>
+				<label>
+					<input class="gamemodeteam" id="fieldjttydrr-1" name="cm-fo-jttydrr" value="4437564" type="checkbox" />
+					<label for="fieldjttydrr-1">3v3 (I have a team)</label>
+				</label>
+				<label>
+					<input class="gamemodeteam" id="fieldjttydrr-2" name="cm-fo-jttydrr" value="4437565" type="checkbox" />
+					<label for="fieldjttydrr-2">5v5 (I have a team)</label>
+				</label>
+       		</div>
+			<label>
+        		<input id="fieldEmail" name="cm-ttijtud-ttijtud" type="email" placeholder="E-mail Address" required />
+       		</label>
+       		<label class="hidden">
+        		<input id="fieldjttydij" name="cm-f-jttydij" type="text" placeholder="Team name" />
+			</label>
+       		<label class="button">
+		        <button type="submit">Register</button>
+			</label>	
+		</form>
+		
+	</div><!-- /container -->
+
+<script type="text/javascript">
+    mixpanel.track("Landing Page Loaded")
+</script>
