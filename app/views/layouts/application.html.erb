@@ -22,8 +22,12 @@
 				<li>Other games...</li>
 			</ul>
 			<ul class="nav">
-				<li><a href="/"><%= link_to "Early access", root_path, :class => current_page?(root_path) ? "active" : "" %></a></li>
-				<li><a href="/about"><%= link_to "About us", about_path, :class => current_page?(about_path) ? "active" : "" %></a></li>
+				<li <% if current_page?(root_path) %>class="active"<% end %>>
+					<%= link_to_if(current_page?(about_path), "Early access", root_path) %>
+				</li>
+				<li <% if current_page?(about_path) %>class="active"<% end %>>
+					<%= link_to_if(current_page?(root_path), "About us", about_path) %>
+				</li>
 			</ul>
 		</div>
 	</div>

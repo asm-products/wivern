@@ -93,8 +93,11 @@ body,h1,h2,h3,input,button,select,textarea {
 	color: inherit;
 	padding-bottom: 3px;
 }
-.header ul.nav a.active {
+.header ul.nav .active {
 	border-bottom: 1px solid #444;
+}
+.header ul.nav .active:hover {
+	cursor: default;
 }
 
 h3 {
