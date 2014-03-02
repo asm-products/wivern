@@ -32,84 +32,84 @@ body,h1,h2,h3,input,button,select,textarea {
 	color: #fff;
 	border-bottom: 1px solid rgba(255,255,255,.05);
 	text-align: left;
-}
-.header h1 {
-	width: 128px;
-	height: 50px;
-	float: left;
-	margin: 14px 0px 0 0;
-	padding-left: 45px;
-	display: block;
-	background: url(image-path('wivern.jpg')) no-repeat;
-	font-size: 18px;
-	color: #fff;
-	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	line-height: 25px;
-}
-.header ul {
-	font-size: 14px;
-	float: left;
-}
-.header ul.game-picker {
-	width: 200px;
-}
-.header ul.game-picker li {
-	float: left;
-	display: none;
-	position: relative;
-	font-size: 18px;
-	font-weight: 100;
-	padding: 14px 0;
-}
-.header ul.game-picker .active {
-	display: block;
-	opacity: .6;
-}
-/*	.arrow-up {
-	position: absolute;
-	width: 0; 
-	height: 0; 
-	border-left: 3px solid transparent;
-	border-right: 3px solid transparent;
-	border-top: 5px solid #fff;
-	right: -15px;
-	top: 26px;
-}*/
-.header ul.nav {
-	float: right;
-	padding: 17px;
-	margin-right: -42px;
-}
-.header ul.nav li {
-	float: left;
-	list-style: none;
-	margin-right: 25px;
-	color: #555;
-}
-.header ul.nav li a {
-	text-decoration: none;
-	color: inherit;
-	padding-bottom: 0px;
-	color: #555;
-	-webkit-transition: .6s all;
-	border-bottom: 1px solid rgba(255,255,255,0);
-}
-.header ul.nav li a:hover {
-	padding-bottom: 5px;
-	color: #777;	
-	-webkit-transition: .4s all;
-	border-bottom: 1px solid rgba(255,255,255,.07);
-}
-.header ul.nav .active {
-	border-bottom: 1px solid #333;
-	padding-bottom: 5px;
-	color: #777;	
-}
-.header ul.nav .active:hover {
-	cursor: default;
-}
+	h1 {
+		width: 128px;
+		height: 50px;
+		float: left;
+		margin: 14px 0px 0 0;
+		padding-left: 45px;
+		display: block;
+		background: url(image-path('wivern.jpg')) no-repeat;
+		font-size: 18px;
+		color: #fff;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		line-height: 25px;
+	}
+	ul {
+		font-size: 14px;
+		float: left;
+		&.game-picker {
+			width: 200px;
+			li {
+				float: left;
+				display: none;
+				position: relative;
+				font-size: 18px;
+				font-weight: 100;
+				padding: 14px 0;
+			}
+			.active {
+				display: block;
+				opacity: .6;
+			}
+			/*.arrow-up {
+				position: absolute;
+				width: 0; 
+				height: 0; 
+				border-left: 3px solid transparent;
+				border-right: 3px solid transparent;
+				border-top: 5px solid #fff;
+				right: -15px;
+				top: 26px;
+			}*/
+		}
+	}
+	ul.nav {
+		float: right;
+		padding: 17px;
+		margin-right: -42px;
+		li {
+			float: left;
+			list-style: none;
+			margin-right: 25px;
+			color: #555;
+			a {
+				text-decoration: none;
+				color: inherit;
+				padding-bottom: 0px;
+				color: #555;
+				-webkit-transition: .6s all;
+				border-bottom: 1px solid rgba(255,255,255,0);
+				&:hover {
+					padding-bottom: 5px;
+					color: #777;	
+					-webkit-transition: .4s all;
+					border-bottom: 1px solid rgba(255,255,255,.07);
+				}
+			}
+			&.active {
+				border-bottom: 1px solid #333;
+				padding-bottom: 5px;
+				color: #777;
+				&:hover {
+					cursor: default;
+				}	
+			}	
+		}
+	}
+}/* /header */
 
 h3 {
 	font-size: 30px;
