@@ -1,5 +1,6 @@
 Wivern::Application.routes.draw do
 
+  devise_for :users
   root 'landing#index'
 
   get 'about' => 'landing#about'
