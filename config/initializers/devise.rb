@@ -233,7 +233,7 @@ Devise.setup do |config|
   require "omniauth-facebook"
 
   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE if Rails.env.development?   
-  config.omniauth :facebook, "267878143374584", "add4df0b6045224b1a43361dea2257f9",
+  config.omniauth :facebook, ENV['FB_APP_NAME'], ENV['FB_APP_SECRET'],
       {:scope => 'email, offline_access', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}} 
 
   # ==> Warden configuration

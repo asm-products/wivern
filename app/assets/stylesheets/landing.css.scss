@@ -367,8 +367,15 @@ body.thanks .content a {
 	text-decoration: none;
 	border-bottom: 1px solid #666;
 }
-.footer .container.assembly img {
+.footer .container.assembly span.img {
+	display: inline-block;
+	width: 120px;
+	height: 27px;
 	margin: 0 0px -9px 1px;
+	background: url(image-path('assembly2.jpg')) 0 0 no-repeat;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
 }
 .footer p {
 	color: #fff;

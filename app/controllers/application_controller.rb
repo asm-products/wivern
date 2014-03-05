@@ -7,4 +7,9 @@ class ApplicationController < ActionController::Base
   	dashboard_path
   end
 
+  def gravatar_url(user)
+    gravatar_id = Digest::MD5::hexdigest(user.email).downcase
+    "http://gravatar.com/avatar/#{gravatar_id}.png"
+  end
+	#<%= image_tag gravatar_url(user) %>
 end
