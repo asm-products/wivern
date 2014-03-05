@@ -1,7 +1,10 @@
 Wivern::Application.routes.draw do
 
   devise_for :users
+
   root 'landing#index'
+
+  get "/dashboard" => "dashboard#index"
 
   get 'about' => 'landing#about'
   get 'thanks' => 'landing#thanks'

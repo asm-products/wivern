@@ -11,3 +11,17 @@
  *= require_self
  *= require_tree .
  */
+
+body {
+	color: #fff;
+}
+label {
+	margin-top: 15px;
+}
+input {
+	margin: 15px 0 25px 0;
+}
+i {
+	font-size: 13px; color: #444;
+	line-height: 1em;
+}

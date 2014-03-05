@@ -14,9 +14,6 @@
 </head>
 <body <% if current_page?(about_path) %>class="about"<% end %>>
 
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
-       
 	<div class="header">
 		<div class="container">
 			<a href="/"><h1>Wivern</h1></a>
@@ -25,15 +22,44 @@
 				<li>Other games...</li>
 			</ul>
 			<ul class="nav">
-				<li <% if current_page?(root_path) %>class="active"<% end %>>
-					<%= link_to_if(current_page?(about_path), "Early access", root_path) %>
-				</li>
-				<li <% if current_page?(about_path) %>class="active"<% end %>>
-					<%= link_to_if(current_page?(root_path), "About us", about_path) %>
-				</li>
+					
+				<% if user_signed_in? %>
+
+					<li <% if current_page?(dashboard_path) %>class="active"<% end %>>
+						<%= link_to 'Dashboard', dashboard_path %>
+					</li>
+					<li <% if current_page?(edit_user_registration_path) %>class="active"<% end %>>
+						<%= link_to 'Settings', edit_user_registration_path %>
+					</li>
+					<li <% if current_page?(destroy_user_session_path) %>class="active"<% end %>>
+						<%= link_to link_to :logout, destroy_user_session_path, :method => :delete %>
+					</li>
+
+				<% else %>
+
+					<li <% if current_page?(root_path) %>class="active"<% end %>>
+						<%= link_to_if(current_page?(about_path), "Early access", root_path) %>
+					</li>
+					<li <% if current_page?(about_path) %>class="active"<% end %>>
+						<%= link_to_if(current_page?(root_path), "About us", about_path) %>
+					</li>
+
+					<li <% if current_page?(new_user_registration_path) %>class="active"<% end %>>
+						<%= link_to 'Create Account', new_user_registration_path %>
+					</li>
+					<li <% if current_page?(new_user_session_path) %>class="active"<% end %>>
+						<%= link_to 'Login', new_user_session_path %>
+					</li>
+
+				<% end %>
+
+				
 			</ul>
 		</div>
 	</div>
+
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
 
 	<%= yield %>
 
