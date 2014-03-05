@@ -10,16 +10,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "base"
+  config.vm.box = "vagrant-heroku-38a258277a"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  # config.vm.box_url = "http://domain.com/path/to/above.box"
+  config.vm.box_url = "https://helpful-assets.s3.amazonaws.com/vagrant-boxes/vagrant-heroku-38a258277a.box"
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  # config.vm.network :forwarded_port, guest: 80, host: 8080
+  config.vm.network :forwarded_port, guest: 5000, host: 5000
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -115,4 +115,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # chef-validator, unless you changed the configuration.
   #
   #   chef.validation_client_name = "ORGNAME-validator"
+
+  config.vm.provision :shell, path: 'config/vagrant/bootstrap.sh'
 end
