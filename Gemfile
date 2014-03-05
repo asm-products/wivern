@@ -45,6 +45,7 @@ gem "figaro"
 
 group :development, :test do
   gem 'dotenv-rails'
+  gem 'foreman'
 end
 
 # Use ActiveModel has_secure_password
