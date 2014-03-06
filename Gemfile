@@ -22,6 +22,8 @@ gem 'omniauth-facebook'
 
 gem 'hirb'
 
+gem 'bootstrap-sass'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -46,6 +48,7 @@ gem "figaro"
 group :development, :test do
   gem 'dotenv-rails'
   gem 'foreman'
+  gem 'rails_layout'
 end
 
 # Use ActiveModel has_secure_password
