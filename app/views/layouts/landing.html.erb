@@ -15,30 +15,7 @@
     <main role="main">
       <div class="container">
 
-
-        <% if current_page?(new_user_registration_path) || current_page?(user_session_path) || current_page?(new_user_password_path) %>
-          <div class="row">
-            <div class="col-sm-9 col-sm-offset-1 col-md-10 main">
-
-              <%= render 'layouts/messages' %>
-              <%= yield %>
-
-            </div>
-          </div>
-        <% else %>
-
-
-          <div class="row">
-            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-
-             <%= render 'layouts/messages' %>
-             <%= render 'layouts/sidebar' %>
-             <%= yield %>
-
-            </div>
-          </div>
-
-        <% end %>
+         <%= yield %>
 
       </div>
     </main>

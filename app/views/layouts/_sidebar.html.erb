@@ -1,0 +1,41 @@
+<div class="col-sm-3 col-md-2 sidebar">
+
+  <% if current_page?(edit_user_registration_path) %>
+ 
+    <ul class="nav nav-sidebar">
+      <li><a href="">Account</a></li>
+      <li><a href="">Teams</a></li>
+      <li><a href="">Games</a></li>
+      <li><a href="">Payments</a></li>
+      <li><a href="">Rewards</a></li>
+    </ul>
+
+  <% else %>
+
+    <h5>Ladders</h5>
+    <ul class="nav nav-sidebar">
+      <li><a href="">1v1 EUW</a></li>
+      <li class="active"><a href="">3v3 EUW</a></li>
+    </ul>
+    <h5>Tournaments</h5>
+    <ul class="nav nav-sidebar">
+      <li><a href="">1v1 EUW Weekly Challenger</a></li>
+      <li><a href=""><s>1v1 EUW NYE Special</s></a></li>
+      <li><a href=""><s>1v1 EUW Trick O' Treat</s></a></li>
+    </ul>
+    <h5>Statistics</h5>
+    <ul class="nav nav-sidebar">
+      <li><a href="">Players</a></li>
+      <li><a href="">Teams</a></li>
+    </ul>
+    <h5>Quick Links</h5>
+    <ul class="nav nav-sidebar">
+      <li><a href="">Match Finder</a></li>
+      <li><a href="">Recent Matches</a></li>
+      <li><a href="">My Team Profile</a></li>
+    </ul>
+
+  <% end %>
+
+
+</div>
