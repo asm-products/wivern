@@ -1,3 +1,3 @@
 class LandingController < ApplicationController
-	layout "landing"
+layout "application"
 end

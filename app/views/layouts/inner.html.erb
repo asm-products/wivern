@@ -7,6 +7,7 @@
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
+    <link href="<%= asset_path 'favicon.ico' %>" rel="shortcut icon" type="image/x-icon"/>
   </head>
   <body>
     <header>
@@ -15,7 +16,15 @@
     <main role="main">
       <div class="container">
 
-         <%= yield %>
+          <div class="row">
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+             <%= render 'layouts/messages' %>
+             <%= render 'layouts/sidebar' %>
+             <%= yield %>
+
+            </div>
+          </div>
 
       </div>
     </main>

@@ -3,7 +3,8 @@ Wivern::Application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   authenticated do
-    root :to => 'dashboard#index', as: :authenticated
+    root :to => 'dashboard#index', as: :dashboard
+    #root :to => 'dashboard#index', as: :authenticated
   end
 
   root :to => 'landing#index'
