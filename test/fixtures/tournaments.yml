@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  type: 
+  desc: MyString
+  image: MyString
+  game_id: 1
+  status: MyString
+  number_of_players: 1
+  number_of_players_limit: 1
+
+two:
+  name: MyString
+  type: 
+  desc: MyString
+  image: MyString
+  game_id: 1
+  status: MyString
+  number_of_players: 1
+  number_of_players_limit: 1

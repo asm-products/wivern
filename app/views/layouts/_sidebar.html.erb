@@ -1,29 +1,25 @@
 <div class="col-sm-3 col-md-2 sidebar">
 
-
-
-    <h5>Ladders</h5>
     <ul class="nav nav-sidebar">
-      <li><a href="">1v1 EUW</a></li>
-      <li class="active"><a href="">3v3 EUW</a></li>
-    </ul>
-    <h5>Tournaments</h5>
-    <ul class="nav nav-sidebar">
+      <li class="top <% if current_page?(dashboard_path) %>active<% end %>">
+        <%= link_to 'Dashboard', dashboard_path %>
+      </li>
+      <li class="top <% if current_page?(tournaments_path) %>active<% end %>">
+        <%= link_to 'Tournaments', tournaments_path %>
+      </li>
       <li><a href="">1v1 EUW Weekly Challenger</a></li>
       <li><a href=""><s>1v1 EUW NYE Special</s></a></li>
       <li><a href=""><s>1v1 EUW Trick O' Treat</s></a></li>
+      <li><a href="/ladders"><b>Ladders</b></a></li>
+      <li><a href="">1v1 EUW</a></li>
+      <li><a href="">3v3 EUW</a></li>
     </ul>
-    <h5>Statistics</h5>
-    <ul class="nav nav-sidebar">
-      <li><a href="">Players</a></li>
-      <li><a href="">Teams</a></li>
-    </ul>
-    <h5>Quick Links</h5>
+   <!--<h5>Quick Links</h5>
     <ul class="nav nav-sidebar">
       <li><a href="">Match Finder</a></li>
       <li><a href="">Recent Matches</a></li>
       <li><a href="">My Team Profile</a></li>
-    </ul>
+    </ul>-->
 
 
 </div>

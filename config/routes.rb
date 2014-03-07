@@ -1,5 +1,7 @@
 Wivern::Application.routes.draw do
 
+  resources :tournaments
+
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   authenticated do

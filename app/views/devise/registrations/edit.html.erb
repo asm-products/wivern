@@ -27,6 +27,10 @@
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
     </div>
+    <div class="form-group">
+      <%= f.label :image %>
+      <%= f.text_field :image, class: 'form-control' %>
+    </div>
     <fieldset>
       <p>Leave these fields blank if you don't want to change your password.</p>
       <div class="form-group">

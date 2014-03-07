@@ -1,9 +1,6 @@
 <%# add navigation links to this file %>
 <% if user_signed_in? %>
 
-	<li <% if current_page?(dashboard_path) %>class="active"<% end %>>
-		<%= link_to 'Dashboard', dashboard_path %>
-	</li>
 	<li <% if current_page?(edit_user_registration_path) %>class="active"<% end %>>
 		<%= link_to 'Settings', edit_user_registration_path %>
 	</li>

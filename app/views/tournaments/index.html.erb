@@ -1,0 +1,32 @@
+      <h2 class="sub-header">Tournaments</h2>
+        
+      <% if false %>
+        <%= tournament.type %>
+        <%= tournament.desc %>
+        <%= tournament.image %>
+        <%= tournament.game_id %>
+        <%= tournament.status %>
+        <%= tournament.number_of_players %>
+        <%= tournament.number_of_players_limit %>
+        <%= link_to 'Show', tournament %>
+        <%= link_to 'Edit', edit_tournament_path(tournament) %>
+        <%= link_to 'Destroy', tournament, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+
+    <div class="row placeholders">
+
+      <% @tournaments.each do |tournament| %>
+
+      <div class="col-xs-6 col-sm-3 placeholder">
+        <img src="http://placehold.it/200x200" class="img-responsive" alt="Generic placeholder thumbnail">
+        <h4><%= tournament.name %></h4>
+        <span class="text-muted">Something else</span>
+      </div>
+
+      <% end %>
+
+    </div>
+
+<br>
+
+<%= link_to 'New Tournament', new_tournament_path %>
